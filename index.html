@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer-based Test</title>
+  <link href="style.css" rel="stylesheet">
+  
+</head>
+<body>
+  <div class="container">
+    <div id="timer">Time Left: <span id="time">10:00</span></div>
+      
+    <div id="calculator-btn">Calculator</div>
+    <div id="calculator">
+    <input type="text" id="display" disabled>
+    <br>
+    <input type="button" value="7" onclick="appendToDisplay('7')">
+    <input type="button" value="8" onclick="appendToDisplay('8')">
+    <input type="button" value="9" onclick="appendToDisplay('9')">
+    <input type="button" value="/" onclick="appendToDisplay('/')">
+    <br>
+    <input type="button" value="4" onclick="appendToDisplay('4')">
+    <input type="button" value="5" onclick="appendToDisplay('5')">
+    <input type="button" value="6" onclick="appendToDisplay('6')">
+    <input type="button" value="*" onclick="appendToDisplay('*')">
+    <br>
+    <input type="button" value="1" onclick="appendToDisplay('1')">
+    <input type="button" value="2" onclick="appendToDisplay('2')">
+    <input type="button" value="3" onclick="appendToDisplay('3')">
+    <input type="button" value="-" onclick="appendToDisplay('-')">
+    <br>
+    <input type="button" value="0" onclick="appendToDisplay('0')">
+    <input type="button" value="." onclick="appendToDisplay('.')">
+    <input type="button" value="=" onclick="calculate()">
+    <input type="button" value="+" onclick="appendToDisplay('+')">
+    <br>
+    <input type="button" value="C" onclick="clearDisplay()">
+</div>
+    <div id="test">
+      <!-- Your test questions go here -->
+      <p>Question 1: What is 2 + 2?</p>
+      <div class="option">
+        <input type="radio" id="answer1a" name="answer1" value="a">
+        <label for="answer1a">a) 3</label>
+      </div>
+      <div class="option">
+        <input type="radio" id="answer1b" name="answer1" value="b">
+        <label for="answer1b">b) 4</label>
+      </div>
+      <div class="option">
+        <input type="radio" id="answer1c" name="answer1" value="c">
+        <label for="answer1c">c) 5</label>
+      </div>
+      <div class="option">
+        <input type="radio" id="answer1d" name="answer1" value="d">
+        <label for="answer1d">d) 6</label>
+      </div>
+      
+      <p>Question 2: What is the capital of France?</p>
+      <div class="option">
+        <input type="radio" id="answer2a" name="answer2" value="a">
+        <label for="answer2a">a) London</label>
+      </div>
+      <div class="option">
+        <input type="radio" id="answer2b" name="answer2" value="b">
+        <label for="answer2b">b) Berlin</label>
+      </div>
+      <div class="option">
+        <input type="radio" id="answer2c" name="answer2" value="c">
+        <label for="answer2c">c) Paris</label>
+      </div>
+      <div class="option">
+        <input type="radio" id="answer2d" name="answer2" value="d">
+        <label for="answer2d">d) Rome</label>
+      </div>      
+  
+      <p>Question 3: When did Nigeria got her independece?</p>
+      <div class="option">
+        <input type="radio" id="answer3a" name="answer3" value="a">
+        <label for="answer3a">a) October 1, 1960</label>
+      </div>
+      <div class="option">
+        <input type="radio" id="answer3b" name="answer3" value="b">
+        <label for="answer3b">b) January 1,1914 </label>
+      </div>
+      <div class="option">
+        <input type="radio" id="answer3c" name="answer3" value="c">
+        <label for="answer3c">c) June 4, 1914</label>
+      </div>
+      <div class="option">
+        <input type="radio" id="answer3d" name="answer3" value="d">
+        <label for="answer3d">d) July 22, 1960</label>
+      </div>
+      
+          <p>Question 4: What is the capital of Rwanda?</p>
+      <div class="option">
+        <input type="radio" id="answer4a" name="answer4" value="a">
+        <label for="answer4a">a) London</label>
+      </div>
+      <div class="option">
+        <input type="radio" id="answer4b" name="answer4" value="b">
+        <label for="answer4b">b) Berlin</label>
+      </div>
+      <div class="option">
+        <input type="radio" id="answer4c" name="answer4" value="c">
+        <label for="answer4c">c) Paris</label>
+      </div>
+      <div class="option">
+        <input type="radio" id="answer4d" name="answer4" value="d">
+        <label for="answer4d">d) Kigali</label>
+      </div>
+            
+   
+    </div>
+  <button id="submit-btn">Submit</button>
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js">
+
+  </script>
+</body>
+</html>

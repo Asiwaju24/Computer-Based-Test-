@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+<title>Computer-based Test</title>
+  <link href="style.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+  <style>
+  body{
+    background: url("2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 95vh;
+  }
+  /**@media (min-width: 900px){
+    body{
+    background: url("bulb.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    }
+  }**/
+  .label{
+    text-align: center;
+    color: white;
+  }
+  main{
+    margin-top: 30px;
+  }
+  .origin{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+    padding: 30px;
+  }
+  .origin h6{
+    background: rgb(90 60 170);
+    border-radius: 10px;
+    padding: 50px;
+    box-shadow: 2px 2px 10px grey;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+  }
+  li img{
+    width: 50px;
+    height: 50px;
+   background: white;
+    padding: 4px;
+    border-radius: 50%;
+  }
+  li i{
+    background: white;
+    color: black;
+    padding: 12px;
+    border-radius: 50%;
+    z-index: 3000;
+  
+  }
+  li img:hover{
+    background: rgb(120 200 90);
+    color: white;
+    box-shadow: 4px 4px 6px white;
+  }
+  /** li i:hover{
+    background: grey;
+    color: white;
+     opacity: 1;
+  }**/
+  .nav-bar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 15px;
+  }
+  .nav-items{
+    background: rgb(160 80 190);
+    position: fixed;
+    top: 0;
+    width: 50%;
+    right: 0;
+  }
+  @media (min-width: 900px){
+      .nav-items{
+    background: rgb(160 80 190);
+    position: fixed;
+    top: 0;
+    width: 50%;
+    z-index: 1;
+   left: 0;
+  } 
+  }
+  #nav-items{
+    list-style: none;
+     display: none;
+    height: 100vh;
+    margin-top: 50px;
+    text-align: center;
+    animation: animateDropdown 4s ease backwards;
+     
+    }
+ #nav-items #another{
+    right: 16.5px;
+    top: 51px;
+   position: fixed;
+   transition: 10s ease left;
+  }
+  @media (min-width: 900px){
+     #nav-items #another{
+       display: none;
+     }
+  }
+  #nav-items li{
+     padding: 30px;
+     
+  }
+@keyframes animateDropdown{
+  0%{
+    transform: rotateX(100deg) rotateY(0deg);
+    opacity: 0;
+    }
+  100%{
+    transform: rotateY(0deg);
+    opacity: 9;
+  }
+  }
+  </style>
+<main>
+  <nav class="nav-bar">
+    <ul>
+      <li><img src="download.png"></li>
+      <li><i class="fas fa-bars" onclick="toggleVisibility('nav-items')"></i></li>
+    </ul>
+  </nav>
+  <h1 class="label"><marquee><em><strong><i><b>Welcome</b></i></strong></em></marquee></h1>
+  <section class="origin">
+    <h6><a href="index.html">USE OF ENGLISH</a></h6>
+    <h6><a href="index.html">MATHEMATICS</a></h6>
+    <h6><a href="index.html">CURRENT AFFAIRS</a></h6>
+    <h6><a href="index.html">GENERAL KNOWLEGE</a></h6>
+  </section>
+  <div class="nav-items">
+     
+   <ul id="nav-items">
+      <li><i class="fas fa-bars" id="another" onclick="toggleVisibility('nav-items')"></i></li>
+     <li><a href="">Access Texts</a></li>
+    <li><a href="">Contact Authorities</a></li>
+    <li><a href="">Online Library</a></li>
+    <li><a href="">Report Issues</a></li>
+  </ul>
+  </div>
+</main>
+<script>
+function toggleVisibility(elementId) {
+      var element = document.getElementById(elementId);
+      if (element.style.display === "none") {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+  }
+    }
+</script>
+</body>
+</html>

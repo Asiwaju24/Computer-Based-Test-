@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+<title>Computer-based Test</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  
+  <style>
+  
+*{
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  }
+section{
+  margin-top: 100px;
+  border-radius: 40px;
+  }
+input{
+  outline: none;
+  width: 90%;
+  border-radius: 10px;
+  color: black;
+}
+body h1{
+  text-align: center;
+}
+.btn{
+  background: rgb(160 160 90);
+  color: taupe;
+  margin-top: 20px;
+  width: 5rem;
+  border-radius: 10px;
+}
+
+#errorMessage{
+  background: white;
+  color: blue;
+  border-radius: 20px;
+  width: 59%;
+  margin: 10px;
+}
+body{
+  box-shadow: 1px 1px 9px rgb(100 100 250);
+  border-radius: 20px;
+}
+  </style>
+  <section class="center">
+    <h1>Log In</h1>
+  <form class="fir" action="main.html">
+       <div id="errorMessage" hidden=""></div>
+     <div class="zx">
+       <!-- <label>Username</label>-->
+    <input type="text" placeholder="Reg number/Matric number" required="">
+    </div>
+    <div class="zx">
+      <!--<label>Enter Password</label>-->
+    <input type="password" placeholder="Enter Password" id="password">
+  </div>
+   
+    <div class="zx">
+    <button class="btn">Submit</button>
+    </div>
+  </form>
+  </section>
+ 
+  <script defer="">
+  
+const password = document.getElementById("password");
+const form = document.querySelector("form");
+const errorMessage = document.getElementById("errorMessage");
+
+form.addEventListener("submit", (e) =>
+{
+    const errors = [ ];
+    
+    if(password.value.length ==" "){
+        errors.push("Enter Password")
+    }
+    
+if(errors.length>0){
+    e.preventDefault();
+    errorMessage.toggleAttribute("hidden");
+    errorMessage.innerHTML = errors.join(", ");
+}
+})
+
+
+  </script>
+</body>
+</html>
